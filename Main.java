@@ -4,15 +4,25 @@ public class Main
 {
   public static void main(String[] args)
   {
-    // Test your tick method below using the Scanner class to
-    // prompt the user for an initial time, and use the tick method
-    // on that Time object.  Check that the resulting time is correct
-    // after the tick
-    
-  
-    // Uncomment these lines of code when you are ready to test your tick and add methods
-    // testTick();
-    // testAdd();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Please enter the number of hours: ");
+        int h = sc.nextInt();
+
+        System.out.println("Please enter the number of minutes: ");
+        int m = sc.nextInt();
+
+        System.out.println("Please enter the number of seconds: ");
+        int s = sc.nextInt();
+
+        Time t = new Time(h, m, s);
+
+        t.tick();
+
+        testTick();
+        testAdd();
+
+        sc.close();
   }
 
   public static void testTick()
